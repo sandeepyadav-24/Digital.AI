@@ -1,0 +1,88 @@
+const projectData = [
+  {
+    name: "Social.AI",
+    description:
+      "Ai powered Website Which help to do all task. Ai powered Website Which help to do all task. Ai powered Website Which help to do all task. Ai powered Website Which help to do all task.",
+    tech: [
+      "Node.js",
+      "Express.js",
+      "React.js",
+      "TailwindCSS",
+      "JWT",
+      "Recoil",
+      "MongoDB",
+      "TypeScript",
+      "Generative AI",
+      "Open AI API",
+      "Gemini Pro",
+      "Gemini Pro Vision",
+    ],
+    link: "www.google.com",
+    image: "www.google.com",
+  },
+  {
+    name: "Social.AI",
+    description:
+      "Ai powered Website Which help to do all task. Ai powered Website Which help to do all task. Ai powered Website Which help to do all task. Ai powered Website Which help to do all task.",
+    tech: [
+      "Node.js",
+      "Express.js",
+      "React.js",
+      "TailwindCSS",
+      "JWT",
+      "Recoil",
+      "MongoDB",
+      "TypeScript",
+      "Generative AI",
+      "Open AI API",
+      "Gemini Pro",
+      "Gemini Pro Vision",
+    ],
+    link: "www.google.com",
+    image: "www.google.com",
+  },
+  {
+    name: "Social.AI",
+    description:
+      "Ai powered Website Which help to do all task. Ai powered Website Which help to do all task. Ai powered Website Which help to do all task. Ai powered Website Which help to do all task.",
+    tech: [
+      "Node.js",
+      "Express.js",
+      "React.js",
+      "TailwindCSS",
+      "JWT",
+      "Recoil",
+      "MongoDB",
+      "TypeScript",
+      "Generative AI",
+      "Open AI API",
+      "Gemini Pro",
+      "Gemini Pro Vision",
+    ],
+    link: "www.google.com",
+    image: "www.google.com",
+  },
+  {
+    name: "Social.AI",
+    description:
+      "Ai powered Website Which help to do all task. Ai powered Website Which help to do all task. Ai powered Website Which help to do all task. Ai powered Website Which help to do all task.",
+    tech: [
+      "Node.js",
+      "Express.js",
+      "React.js",
+      "TailwindCSS",
+      "JWT",
+      "Recoil",
+      "MongoDB",
+      "TypeScript",
+      "Generative AI",
+      "Open AI API",
+      "Gemini Pro",
+      "Gemini Pro Vision",
+    ],
+    link: "www.google.com",
+    image: "www.google.com",
+  },
+];
+
+export default projectData;
