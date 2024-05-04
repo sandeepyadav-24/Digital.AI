@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import { SessionProvider } from "next-auth/react";
+import "../globals.css";
+import SideBar from "@/components/SideBar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -9,14 +9,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  session,
 }: Readonly<{
   children: React.ReactNode;
-  session: any;
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="flex flex-row">
+        <SideBar />
+        {children}
+      </body>
     </html>
   );
 }
