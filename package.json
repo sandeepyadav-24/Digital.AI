@@ -16,6 +16,7 @@
     "dotenv": "^16.4.5",
     "install": "^0.13.0",
     "mongoose": "^8.3.2",
+    "mui-chips-input": "^2.1.4",
     "next": "14.2.3",
     "next-auth": "^4.24.7",
     "npm": "^10.7.0",
