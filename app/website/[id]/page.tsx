@@ -42,7 +42,7 @@ const page = () => {
       <div className="md:w-2/3 overflow-y-auto bg-[#EEECE3] h-screen ">
         <Skills skills={WebsiteData.skills} />
         <Projects project={WebsiteData.project} />
-        <Hackathon />
+        <Hackathon hackathons={WebsiteData.hackathons} />
         <AboutMe socials={WebsiteData.socialLinks} about={WebsiteData.about} />
       </div>
     </div>
