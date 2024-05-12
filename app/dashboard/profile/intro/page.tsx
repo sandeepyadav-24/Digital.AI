@@ -4,7 +4,7 @@ import ProfileNav from "@/components/ProfileNav";
 
 import { MuiChipsInput } from "mui-chips-input";
 
-const page = () => {
+const IntroPage = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [displayName, setDisplayName] = useState("");
@@ -168,4 +168,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default IntroPage;
