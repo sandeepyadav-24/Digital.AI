@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { MuiChipsInput } from "mui-chips-input";
 import ProfileNav from "@/components/ProfileNav";
+import { MdDelete } from "react-icons/md";
 
 const SocialPage = () => {
   // Interface for typescript for type check
@@ -57,6 +58,12 @@ const SocialPage = () => {
     setCurrentPage(Math.ceil(newId / projectsPerPage));
   };
 
+  // Handle Delete Project Function
+  const handleDeleteProject = (id: number) => {
+    const updatedProjects = projects.filter((project) => project.id !== id);
+    setProjects(updatedProjects);
+  };
+
   const indexOfLastProject = currentPage * projectsPerPage;
   const indexOfFirstProject = indexOfLastProject - projectsPerPage;
   const currentProjects = projects.slice(
@@ -66,18 +73,18 @@ const SocialPage = () => {
 
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
   return (
-    <div className="w-4/5 ">
+    <div className="md:w-4/5 ">
       <ProfileNav />
       <hr />
       <div className="flex flex-row justify-between">
-        <h5 className="text-2xl font-bold my-5 mx-10">Project</h5>
+        <h5 className="text-2xl font-bold my-5 mx-5 md:mx-10">Project</h5>
         <button className="bg-black text-white justify-between my-4 mx-10 px-4 rounded-3xl ">
           save changes
         </button>
       </div>
 
       <div className="overflow-y-auto h-[550px]">
-        <div className="w-1/2 mx-5 my-10">
+        <div className="md:w-1/2 mx-5 my-10">
           <div>
             {currentProjects.map((project) => (
               <div key={project.id}>
@@ -110,17 +117,6 @@ const SocialPage = () => {
                     }
                     className="rounded-md w-full  "
                   />
-
-                  {/**<input
-              type="text"
-              name="techStack"
-              value={project.techStack}
-              onChange={(event) =>
-                handleInputChange(project.id, "techStack", event.target.value)
-              }
-              placeholder="Tech Stack"
-              className="border-black border-[1px] rounded-md w-[100%] py-1 px-3"
-            /> */}
                 </div>
 
                 {/* Name Of the Project */}
@@ -178,11 +174,14 @@ const SocialPage = () => {
                     className="border-black border-[1px] rounded-md w-[100%] py-1 px-3"
                   />
                 </div>
-                <hr className="my-3" />
+                {/* Delete Button */}
+                <button onClick={() => handleDeleteProject(project.id)}>
+                  <MdDelete className="text-3xl my-2 text-red-700" />
+                </button>
               </div>
             ))}
 
-            <div className=" flex flex-row">
+            <div className=" flex flex-row my-5  text-center">
               {/* Pagination buttons */}
               {projects.length > projectsPerPage && (
                 <div>

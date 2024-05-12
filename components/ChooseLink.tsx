@@ -59,7 +59,7 @@ const ChooseLink = (props: Link) => {
             placeholder="Add social url"
             value={social}
             onChange={handleInputChange}
-            className="px-3 py-1  w-[170%] ml-2 my-3 "
+            className="px-3 py-1  md:w-[170%] ml-2 my-3 "
           />
         </div>
       </div>

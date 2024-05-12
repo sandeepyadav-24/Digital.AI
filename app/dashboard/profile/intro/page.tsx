@@ -13,9 +13,29 @@ const page = () => {
   const [achievements, setAchievements] = React.useState([]);
   const [skill, setSkill] = React.useState([]);
   const handleSaveChanges = () => {
-    alert(
-      `First Name: ${firstName} , Last Name : ${lastName} , Display Name : ${displayName} `
-    );
+    // Post Url for Backend
+    const Url = "";
+    // Just Make an Object of an POST Data
+    const data = {
+      firstName: firstName,
+      lastName: lastName,
+      displayName: displayName,
+      intro: intro,
+      about: about,
+      achievements: achievements,
+      skill: skill,
+    };
+
+    //Consoling Data for Checking for Future Purpose
+    console.log(data);
+
+    const response = fetch(Url, {
+      //method: POST,
+    });
+
+    {
+      /** Post data to Backend than to DB  */
+    }
   };
 
   const skillHandleChange = (newSkill: any) => {
@@ -26,7 +46,7 @@ const page = () => {
     setAchievements(newChips);
   };
   return (
-    <div className="w-4/5 ">
+    <div className="md:w-4/5 ">
       {/* Profile Nav Contains All Nav Routes  */}
       <ProfileNav />
       <hr />
@@ -34,7 +54,9 @@ const page = () => {
       <div className="  ">
         {/* ANother Nav About the Page */}
         <div className="flex flex-row justify-between">
-          <h5 className="text-2xl font-bold my-5 mx-10">Intro & Skills</h5>
+          <h5 className="text-2xl font-bold my-5 mx-5 md:mx-10">
+            Intro & Skills
+          </h5>
           <div
             className="mx-10 bg-black text-white rounded-3xl my-4 px-4 py-2"
             onClick={handleSaveChanges}
@@ -44,7 +66,7 @@ const page = () => {
         </div>
         {/* Now Another Section of the Page */}
         <div className="overflow-y-auto h-[555px]">
-          <div className="w-1/2 mx-5 ">
+          <div className="md:w-1/2 mx-5 ">
             <div className="p-3">
               {/* Name Section  */}
               <div className="name flex flex-row py-3 justify-between">
@@ -138,7 +160,7 @@ const page = () => {
                 />
               </div>
             </div>
-            <hr />
+            <hr className="my-10" />
           </div>
         </div>
       </div>

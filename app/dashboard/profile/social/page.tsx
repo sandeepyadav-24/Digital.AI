@@ -29,18 +29,22 @@ const SocialPage = () => {
 
   const handleClick = () => {
     {
-      links.map((e) => {
-        alert(`Platform: ${e.platform} and Url: ${e.social}`);
-      });
+      // Console the Data to check
+      console.log(links);
+
+      // Send All Data to Backend for In thier MongoDB
+      {
+        /**  Send Data */
+      }
     }
   };
 
   return (
-    <div className="w-4/5 ">
+    <div className="md:w-4/5 ">
       <ProfileNav />
       <hr />
       <div className="flex flex-row justify-between ">
-        <h5 className="text-2xl font-bold my-5 mx-10">Social Links</h5>
+        <h5 className="text-2xl font-bold my-5 mx-5 md:mx-10">Social Links</h5>
         <div
           className="bg-black text-white px-5 py-2 my-4 rounded-3xl mx-10"
           onClick={handleClick}
@@ -48,8 +52,8 @@ const SocialPage = () => {
           Save changes
         </div>
       </div>
-      <div className="overflow-y-auto h-[600px]">
-        <div className="w-1/2 mx-5 my-10">
+      <div className="overflow-y-auto h-[553px]">
+        <div className="md:w-1/2 mx-2 md:mx-5 my-10">
           <div>
             {links.map((link, index) => (
               <ChooseLink
@@ -67,7 +71,7 @@ const SocialPage = () => {
               + Add Social Link
             </button>
           </div>
-          <hr />
+          <hr className="my-10" />
         </div>
       </div>
     </div>

@@ -4,15 +4,15 @@ import React from "react";
 import { IoCopyOutline } from "react-icons/io5";
 const page = () => {
   return (
-    <div className="w-4/5">
-      <section className="link flex flex-row justify-between mx-10 my-5">
-        <h4 className="text-4xl font-bold">Hi, Sandeep</h4>
+    <div className="md:w-4/5">
+      <section className="link flex flex-col md:flex-row justify-between mx-10 my-10 md:my-5 ">
+        <h4 className="text-4xl font-bold ">Hi, Sandeep</h4>
         <div className="flex flex-row">
-          <div className="bg-[#F8F7F1] mx-1 rounded-xl border-[#E7E0C2] border-[0.5px] ">
+          <div className="bg-[#F8F7F1] mx-1 my-3 md:my-0 rounded-xl border-[#E7E0C2] border-[0.5px] ">
             <div></div>
             <div className="text-lg py-1 px-3 ">
               <Link href={"/website/sandeepyadav_24"}>
-                digital.io/sandeepyadav_24/
+                snapsite.com/website/sandeepyadav_24
               </Link>
             </div>
             <div></div>
