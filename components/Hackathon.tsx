@@ -36,10 +36,13 @@ const Hackathon = (props: HackathonProp) => {
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
         >
-          {props.hackathons.map((project) => {
+          {props.hackathons.map((project, index) => {
             return (
               <SwiperSlide>
-                <div className="bg-white flex flex-col md:flex-row m-10 ">
+                <div
+                  className="bg-white flex flex-col md:flex-row m-10 "
+                  key={index}
+                >
                   {/* This is the First Part of the DIV   */}
                   <div className="first_part md:w-1/3 p-3">
                     <Image

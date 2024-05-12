@@ -53,9 +53,12 @@ const Projects = (props: ProjectProp) => {
                   {/* This is the second Part of the DIV */}
                   <div className="second_part md:w-2/3 p-3">
                     <div className="techStack flex flex-row flex-wrap my-2">
-                      {project.tech.map((e) => {
+                      {project.tech.map((e, index) => {
                         return (
-                          <div className="bg-[#E7F2FF] text-[#2D4FC5] my-1 mx-1 py-1 px-2 rounded-sm">
+                          <div
+                            className="bg-[#E7F2FF] text-[#2D4FC5] my-1 mx-1 py-1 px-2 rounded-sm"
+                            key={index}
+                          >
                             {e}
                           </div>
                         );
